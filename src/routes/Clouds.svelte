@@ -1,5 +1,22 @@
-<script>
+<!-- <script>
     import { base } from '$app/paths';
+</script> -->
+
+<script>
+    import { onMount, onDestroy } from 'svelte';
+    import { base } from '$app/paths';
+
+    export let particleBackground = true;
+
+    onMount(() => {
+        window.particleBackground = particleBackground;
+    });
+
+    $: {
+        if (typeof window !== 'undefined') {
+            window.particleBackground = particleBackground;
+        }
+    }
 </script>
 
 <div id="clouds">
@@ -10,7 +27,7 @@
 
     #clouds {
         top:0;
-        position: fixed;
+        position: relative;
         width: 0vw;
         height: 0vw;
         pointer-events: none;

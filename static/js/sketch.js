@@ -1,5 +1,9 @@
 
-let particleBackground = false;
+var isScrolling = false;
+var scrolling = 0;
+let timeStart = 0;
+
+var particleBackground = true;
 // this class describes the properties of a single particle.
 class Particle {
     // setting the co-ordinates, radius and the
@@ -42,29 +46,34 @@ class Particle {
       canvas.style('display', 'block');
       canvas.position(0,0);
       canvas.style('z-index',-1);
-      for(let i = 0;i<width/10;i++){
+      for(let i = 0;i<width/2;i++){
         particles.push(new Particle());
       }
+      timeStart = millis();
     }
     
     function draw() {
       background(1000);
-      if (mouseIsPressed) {
-        for(let i = 0;i<particles.length;i++) {
-            particles[i].createParticle();
-            particles[i].moveParticle();
+      if (particleBackground) {
+        if (mouseIsPressed) {
+          for(let i = 0;i<particles.length;i++) {
+              particles[i].createParticle();
+              particles[i].moveParticle();
+          }
         }
-        }
+      }
     }
     
-    function mouseClicked() {
+    function keyPressed() {
+      if (key == ' ') {
         if (particleBackground) {
             particleBackground = false;
         } else {
             particleBackground = true;
         }
       }
+    }
 
     function windowResized() {
-        resizeCanvas(windowWidth, windowHeight);
+        resizeCanvas(windowWidth, document.body.scrollHeight);
     }

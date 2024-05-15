@@ -35,7 +35,7 @@
         display: flex;
         position: fixed;
         top: 9vh;
-        font-size: 1em;
+        font-size: 1.2em;
         left: 50%;
         transform: translate(-50%, 0);
     }
