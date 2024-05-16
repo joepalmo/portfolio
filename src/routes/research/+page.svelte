@@ -39,4 +39,27 @@
         text-decoration: none !important;
         color: var(--black);
     }
+
+    /* Responsive styles */
+    @media (max-width: 600px) {
+        #body {
+            width: 90vw;
+            min-width: auto;
+            margin-top: 15vh;
+            font-size: 1em;
+            line-height: 1.5rem;
+            padding: 10px 5px 30px 5px;
+        }
+
+        .about-blurb, .social-links {
+            text-align: center;
+            font-size: 1em;
+            padding: 0 10px;
+        }
+
+        .social-links a {
+            font-size: 1.2em;
+            margin: 0 5px;
+        }
+    }
 </style>

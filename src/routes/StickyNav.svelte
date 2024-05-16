@@ -43,6 +43,7 @@
     @media (max-width: 800px) {
         .nav-item {
             display: inline-block;
+            font-size: 0.8em;
         }
     }
     .nav-item {
