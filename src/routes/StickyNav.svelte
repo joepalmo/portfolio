@@ -4,8 +4,8 @@
 
 <div class="sticky-nav">
     <nav>
-        <a class="nav-item" id="about-nav" href="/">ABOUT</a>
-        <a class="nav-item" id="research-nav" href="/research">RESEARCH</a>
+        <a class="nav-item" id="about-nav" href="{base}/">ABOUT</a>
+        <a class="nav-item" id="research-nav" href="{base}/research">RESEARCH</a>
         <a class="nav-item" id="cv-nav" href="{ base }/JoePalmo.CV.2022.pdf" target="_blank">CV</a>
     </nav>
 </div>
