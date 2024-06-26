@@ -1,3 +1,3 @@
 Simple personal website!
 
-Access [here](https://joepalmo.github.io/portfolio/)
+Access [here](https://www.joepalmo.com)
